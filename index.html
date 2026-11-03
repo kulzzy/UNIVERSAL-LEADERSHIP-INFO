@@ -1,7 +1,13 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Kulzzy Universal Leadership | About & Guidelines</title><style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Kulzzy Universal Leadership | Official Guide</title>
+
+<style>
+
 :root {
     --bg: #06122a;
     --card: #0c1d3b;
@@ -19,6 +25,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 90px;
 }
 
 body {
@@ -36,7 +43,7 @@ header {
 }
 
 .logo {
-    font-size: 38px;
+    font-size: 40px;
     margin-bottom: 10px;
 }
 
@@ -52,6 +59,51 @@ header p {
     margin-top: 8px;
 }
 
+/* NAVIGATION */
+
+.navigation {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #081832;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0 4px 15px rgba(0,0,0,.35);
+}
+
+.nav-inner {
+    display: flex;
+    gap: 9px;
+    padding: 12px;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-inner::-webkit-scrollbar {
+    display: none;
+}
+
+.nav-inner a {
+    flex-shrink: 0;
+    text-decoration: none;
+    color: var(--white);
+    background: #10294d;
+    border: 1px solid var(--border);
+    padding: 8px 13px;
+    border-radius: 25px;
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-inner a:hover,
+.nav-inner a:active {
+    background: var(--gold);
+    color: #06122a;
+}
+
+/* MAIN CONTENT */
+
 .container {
     max-width: 850px;
     margin: auto;
@@ -60,7 +112,7 @@ header p {
 
 .hero {
     text-align: center;
-    padding: 25px 15px;
+    padding: 28px 15px;
 }
 
 .hero h2 {
@@ -80,6 +132,7 @@ header p {
     border-radius: 13px;
     padding: 20px;
     margin-bottom: 17px;
+    scroll-margin-top: 85px;
 }
 
 .card h2 {
@@ -88,10 +141,16 @@ header p {
     margin-bottom: 13px;
 }
 
+.card h3 {
+    color: var(--gold);
+    font-size: 15px;
+    margin: 16px 0 8px;
+}
+
 .card p {
     color: var(--muted);
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 11px;
 }
 
 .card ul,
@@ -139,9 +198,76 @@ header p {
     margin-top: 12px;
 }
 
+/* BENEFITS */
+
+.benefit {
+    background: #10294d;
+    border: 1px solid var(--border);
+    border-radius: 11px;
+    padding: 16px;
+    margin: 12px 0;
+}
+
+.benefit .icon {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.benefit h3 {
+    color: var(--gold);
+    margin: 0 0 7px;
+    font-size: 16px;
+}
+
+.benefit p {
+    margin: 0;
+    font-size: 13px;
+}
+
+/* BADGE */
+
+.badge-box {
+    text-align: center;
+    background: linear-gradient(145deg,#10294d,#081832);
+    border: 1px solid var(--gold);
+    padding: 22px 12px;
+    border-radius: 12px;
+    margin: 12px 0;
+}
+
+.badge-box .medal {
+    font-size: 38px;
+}
+
+.badge-box h3 {
+    color: var(--gold);
+    margin: 8px 0;
+}
+
+/* HALL OF FAME */
+
+.hall-box {
+    text-align: center;
+    background: linear-gradient(145deg,#172f50,#09172f);
+    border: 1px solid var(--gold);
+    padding: 22px;
+    border-radius: 12px;
+}
+
+.hall-box .trophy {
+    font-size: 45px;
+}
+
+.hall-box h3 {
+    color: var(--gold);
+    font-size: 19px;
+}
+
+/* FOOTER */
+
 footer {
     text-align: center;
-    padding: 25px 15px;
+    padding: 28px 15px;
     border-top: 1px solid var(--border);
     color: var(--muted);
     font-size: 12px;
@@ -154,7 +280,7 @@ footer strong {
 .top-button {
     display: block;
     width: fit-content;
-    margin: 20px auto;
+    margin: 22px auto;
     background: var(--gold);
     color: #06122a;
     text-decoration: none;
@@ -164,26 +290,95 @@ footer strong {
     font-size: 13px;
 }
 
-.top-button:active {
-    transform: scale(.96);
+@media(max-width:480px) {
+
+    header h1 {
+        font-size: 21px;
+    }
+
+    .hero h2 {
+        font-size: 20px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card h2 {
+        font-size: 17px;
+    }
+
 }
 
-</style></head><body><header>
+</style>
+</head>
+
+<body>
+
+<header>
+
     <div class="logo">🌍</div>
+
     <h1>KULZZY UNIVERSAL LEADERSHIP</h1>
+
     <p>Leadership • Recognition • Influence • Unity</p>
-</header><div class="container"><div class="hero">
+
+</header>
+
+
+<!-- NAVIGATION BAR -->
+
+<nav class="navigation">
+
+    <div class="nav-inner">
+
+        <a href="#about">ABOUT</a>
+
+        <a href="#positions">POSITIONS</a>
+
+        <a href="#participate">HOW TO JOIN</a>
+
+        <a href="#voting">VOTING RULES</a>
+
+        <a href="#benefits">WINNER BENEFITS</a>
+
+        <a href="#cash">CASH CELEBRATION</a>
+
+        <a href="#contracts">CONTRACTS</a>
+
+        <a href="#badges">BADGES</a>
+
+        <a href="#hall">HALL OF FAME</a>
+
+        <a href="#conduct">COMMUNITY RULES</a>
+
+        <a href="#vision">OUR VISION</a>
+
+    </div>
+
+</nav>
+
+
+<div class="container">
+
+
+<!-- WELCOME -->
+
+<div class="hero">
+
     <h2>WELCOME TO UNIVERSAL LEADERSHIP</h2>
+
     <p>
         Your voice matters. Your participation counts.
         Your leadership journey starts here.
     </p>
+
 </div>
 
 
 <!-- ABOUT -->
 
-<div class="card">
+<div class="card" id="about">
 
     <h2>🌍 ABOUT KULZZY UNIVERSAL LEADERSHIP</h2>
 
@@ -203,10 +398,10 @@ footer strong {
     </p>
 
     <p>
-        Through participation and a voting system,
-        members can support their preferred contestants
-        while contestants work towards earning
-        leadership recognition.
+        Through participation and voting, members can
+        support their preferred contestants while
+        contestants work towards earning leadership
+        recognition.
     </p>
 
     <p>
@@ -218,9 +413,9 @@ footer strong {
 </div>
 
 
-<!-- LEADERSHIP STRUCTURE -->
+<!-- POSITIONS -->
 
-<div class="card">
+<div class="card" id="positions">
 
     <h2>🏛️ OFFICIAL LEADERSHIP STRUCTURE</h2>
 
@@ -231,40 +426,55 @@ footer strong {
     </p>
 
     <div class="position">
+
         <strong>🥇 1ST POSITION — UNIVERSAL PRESIDENT</strong>
+
         <span>
             The highest-ranking leadership position.
         </span>
+
     </div>
 
     <div class="position">
+
         <strong>🥈 2ND POSITION — UNIVERSAL VICE PRESIDENT</strong>
+
         <span>
             The second-highest leadership position.
         </span>
+
     </div>
 
     <div class="position">
+
         <strong>🥉 3RD POSITION — UNIVERSAL SENATE PRESIDENT</strong>
+
         <span>
             The third-highest leadership position.
         </span>
+
     </div>
 
     <div class="position">
+
         <strong>🏅 1,000TH POSITION — LOCAL GOVERNMENT CHAIRMAN (LGC)</strong>
+
         <span>
             The official Local Government Chairman
             recognition position awarded to the
             participant ranked 1,000th.
         </span>
+
     </div>
 
     <div class="notice">
+
         <strong>KULZZY UNIVERSAL CITIZENS:</strong>
+
         All participants who do not occupy any of the
         designated leadership positions are recognised
         as Kulzzy Universal Citizens.
+
     </div>
 
 </div>
@@ -272,7 +482,7 @@ footer strong {
 
 <!-- PARTICIPATION -->
 
-<div class="card">
+<div class="card" id="participate">
 
     <h2>📋 HOW TO PARTICIPATE</h2>
 
@@ -293,7 +503,7 @@ footer strong {
         <li>
             <strong>Find your preferred contestant.</strong><br>
             Browse available contestants or use
-            the search feature to find someone.
+            the search feature.
         </li>
 
         <li>
@@ -321,7 +531,7 @@ footer strong {
 
 <!-- VOTING RULES -->
 
-<div class="card">
+<div class="card" id="voting">
 
     <h2>🗳️ OFFICIAL VOTING RULES</h2>
 
@@ -370,70 +580,417 @@ footer strong {
     </ol>
 
     <div class="notice">
+
         <strong>IMPORTANT:</strong>
+
         Voting eligibility is linked to your registered
         account. Creating additional accounts to gain
         extra votes defeats the purpose of fair participation.
+
     </div>
 
 </div>
 
 
-<!-- RANKING -->
+<!-- WINNER BENEFITS -->
 
-<div class="card">
+<div class="card" id="benefits">
 
-    <h2>🏆 HOW LEADERSHIP POSITIONS ARE DETERMINED</h2>
+    <h2>🏆 BENEFITS OF BECOMING A WINNER</h2>
 
     <p>
-        Leadership recognition is determined by
-        contestants' official rankings based on
-        their valid voting performance.
+        Becoming a recognised winner of Kulzzy Universal
+        Leadership is an opportunity to gain recognition,
+        visibility, appreciation and potential opportunities.
+    </p>
+
+    <p>
+        Winning is not just about occupying a position.
+        It is about becoming recognised within a growing
+        universal community.
+    </p>
+
+
+    <div class="benefit">
+
+        <div class="icon">💰</div>
+
+        <h3>1. CASH CELEBRATIONS</h3>
+
+        <p>
+            People can voluntarily celebrate winners
+            by sending them cash gifts as a way of
+            appreciating their achievement.
+        </p>
+
+        <p>
+            The more people choose to celebrate you,
+            the more cash you can potentially receive.
+            Your celebrations and earnings can grow
+            as more supporters recognise your achievement.
+        </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <div class="icon">🤝</div>
+
+        <h3>2. POTENTIAL COMPANY CONTRACTS</h3>
+
+        <p>
+            Companies and organisations may discover
+            outstanding winners and consider signing
+            contracts with them for brand promotion,
+            ambassadorial roles, partnerships or other
+            business opportunities.
+        </p>
+
+        <p>
+            Such opportunities are possible, but they
+            are not guaranteed. Any contract depends
+            on the company's interest, requirements
+            and independent agreement with the winner.
+        </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <div class="icon">🏅</div>
+
+        <h3>3. OFFICIAL LEADERSHIP BADGE</h3>
+
+        <p>
+            The three major leadership winners receive
+            official Kulzzy Universal Leadership profile
+            badges recognising their positions.
+        </p>
+
+        <p>
+            These badges distinguish the Universal
+            President, Universal Vice President and
+            Universal Senate President.
+        </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <div class="icon">🏛️</div>
+
+        <h3>4. HALL OF FAME RECOGNITION</h3>
+
+        <p>
+            Official daily winners can have their
+            achievements preserved in the Kulzzy
+            Universal Leadership Hall of Fame.
+        </p>
+
+        <p>
+            Their winning history can serve as a
+            permanent record of their achievement
+            within the community.
+        </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <div class="icon">📢</div>
+
+        <h3>5. PUBLIC RECOGNITION AND EXPOSURE</h3>
+
+        <p>
+            Winners can receive public recognition
+            through Kulzzy Universal Leadership
+            announcements and official winner
+            publicity.
+        </p>
+
+        <p>
+            This creates an opportunity for more
+            people to discover their names and
+            achievements.
+        </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <div class="icon">🌍</div>
+
+        <h3>6. COMMUNITY INFLUENCE</h3>
+
+        <p>
+            Winners gain recognition within the
+            Kulzzy Universal Community and an
+            opportunity to encourage participation,
+            unity and positive community activities.
+        </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <div class="icon">📜</div>
+
+        <h3>7. LEADERSHIP ACHIEVEMENT RECORD</h3>
+
+        <p>
+            Official winning records provide a
+            reference to the achievements and
+            leadership positions earned by winners.
+        </p>
+
+    </div>
+
+
+    <div class="benefit">
+
+        <div class="icon">🚀</div>
+
+        <h3>8. FUTURE OPPORTUNITIES</h3>
+
+        <p>
+            Being recognised can create opportunities
+            to connect with other participants,
+            supporters, entrepreneurs and organisations
+            interested in community engagement.
+        </p>
+
+        <p>
+            These opportunities depend on individual
+            circumstances and are not guaranteed.
+        </p>
+
+    </div>
+
+
+    <div class="notice">
+
+        <strong>IMPORTANT:</strong>
+
+        Leadership recognition does not automatically
+        guarantee cash gifts, employment, company contracts,
+        sponsorships or business partnerships. These depend
+        on voluntary supporters and independent third-party
+        decisions.
+
+    </div>
+
+</div>
+
+
+<!-- CASH CELEBRATIONS -->
+
+<div class="card" id="cash">
+
+    <h2>💰 CASH CELEBRATIONS AND EARNINGS</h2>
+
+    <p>
+        At Kulzzy Universal Leadership, supporters
+        have the opportunity to celebrate outstanding
+        winners through voluntary cash gifts.
+    </p>
+
+    <p>
+        This gives friends, family members, supporters
+        and admirers an opportunity to appreciate
+        someone's leadership achievement.
+    </p>
+
+    <p>
+        The more people who voluntarily celebrate
+        a winner, the greater the potential amount
+        the winner can receive.
+    </p>
+
+    <div class="notice">
+
+        <strong>YOUR ACHIEVEMENT DESERVES CELEBRATION.</strong>
+
+        Cash celebrations are voluntary gifts.
+        No winner is guaranteed a particular amount
+        or number of celebrations.
+
+    </div>
+
+</div>
+
+
+<!-- COMPANY CONTRACTS -->
+
+<div class="card" id="contracts">
+
+    <h2>🤝 COMPANY CONTRACTS AND BUSINESS OPPORTUNITIES</h2>
+
+    <p>
+        Kulzzy Universal Leadership creates an opportunity
+        for outstanding personalities to gain visibility
+        within a growing community.
+    </p>
+
+    <p>
+        Companies, brands and organisations may notice
+        some winners and decide to approach them for:
     </p>
 
     <ul>
 
-        <li>
-            <span class="highlight">1st Place:</span>
-            Universal President.
-        </li>
+        <li>Brand ambassador opportunities.</li>
 
-        <li>
-            <span class="highlight">2nd Place:</span>
-            Universal Vice President.
-        </li>
+        <li>Advertising and promotional contracts.</li>
 
-        <li>
-            <span class="highlight">3rd Place:</span>
-            Universal Senate President.
-        </li>
+        <li>Social media promotion.</li>
 
-        <li>
-            <span class="highlight">1,000th Place:</span>
-            Local Government Chairman (LGC).
-        </li>
+        <li>Brand partnerships.</li>
 
-        <li>
-            <span class="highlight">All other participants:</span>
-            Kulzzy Universal Citizens.
-        </li>
+        <li>Event appearances.</li>
+
+        <li>Business collaborations.</li>
 
     </ul>
 
     <p>
-        Official publication and closing of the
-        leadership challenge are managed by
-        authorised administrators.
+        However, these opportunities are not guaranteed.
+        Companies make their own decisions based on
+        their business needs and interests.
     </p>
 
 </div>
 
 
-<!-- COMMUNITY EXPECTATIONS -->
+<!-- BADGES -->
 
-<div class="card">
+<div class="card" id="badges">
 
-    <h2>🤝 COMMUNITY CONDUCT & EXPECTATIONS</h2>
+    <h2>🏅 OFFICIAL LEADERSHIP BADGES</h2>
+
+    <p>
+        Official profile badges are a special form
+        of recognition reserved for the three major
+        leadership winners.
+    </p>
+
+    <div class="badge-box">
+
+        <div class="medal">🥇</div>
+
+        <h3>UNIVERSAL PRESIDENT</h3>
+
+        <p>
+            Official President recognition badge.
+        </p>
+
+    </div>
+
+    <div class="badge-box">
+
+        <div class="medal">🥈</div>
+
+        <h3>UNIVERSAL VICE PRESIDENT</h3>
+
+        <p>
+            Official Vice President recognition badge.
+        </p>
+
+    </div>
+
+    <div class="badge-box">
+
+        <div class="medal">🥉</div>
+
+        <h3>UNIVERSAL SENATE PRESIDENT</h3>
+
+        <p>
+            Official Senate President recognition badge.
+        </p>
+
+    </div>
+
+    <div class="notice">
+
+        Official profile badges are reserved for
+        these three major leadership winners.
+        Other participants remain recognised
+        according to their respective positions
+        and citizenship status.
+
+    </div>
+
+</div>
+
+
+<!-- HALL OF FAME -->
+
+<div class="card" id="hall">
+
+    <div class="hall-box">
+
+        <div class="trophy">🏆</div>
+
+        <h3>KULZZY UNIVERSAL HALL OF FAME</h3>
+
+        <p>
+            Celebrating outstanding achievements
+            and preserving the history of winners.
+        </p>
+
+    </div>
+
+    <h2 style="margin-top:20px;">
+        🌟 ABOUT THE HALL OF FAME
+    </h2>
+
+    <p>
+        The Kulzzy Universal Hall of Fame is a
+        recognition platform dedicated to preserving
+        the achievements of previous daily winners.
+    </p>
+
+    <p>
+        It gives winners an opportunity to have
+        their achievements remembered even after
+        their winning day has ended.
+    </p>
+
+    <h3>WHAT THE HALL OF FAME PRESERVES</h3>
+
+    <ul>
+
+        <li>Previous daily winners.</li>
+
+        <li>Winner's name and recognition category.</li>
+
+        <li>Date of achievement.</li>
+
+        <li>Official winning vote count.</li>
+
+        <li>Historical leadership achievements.</li>
+
+    </ul>
+
+    <p>
+        The Hall of Fame serves as a historical
+        record of outstanding participation and
+        achievement within Kulzzy Universal Leadership.
+    </p>
+
+</div>
+
+
+<!-- COMMUNITY RULES -->
+
+<div class="card" id="conduct">
+
+    <h2>🤝 COMMUNITY CONDUCT AND EXPECTATIONS</h2>
 
     <p>
         Every Kulzzy Universal participant is expected
@@ -494,7 +1051,7 @@ footer strong {
 
 <!-- VISION -->
 
-<div class="card">
+<div class="card" id="vision">
 
     <h2>🌟 OUR VISION</h2>
 
@@ -512,9 +1069,13 @@ footer strong {
     </p>
 
     <div class="notice">
+
         <strong>YOUR PARTICIPATION MATTERS.</strong><br>
-        Your voice counts. Your support matters.
+
+        Your voice counts.
+        Your support matters.
         Your leadership journey begins here.
+
     </div>
 
 </div>
@@ -522,16 +1083,26 @@ footer strong {
 
 <a href="#" class="top-button"
    onclick="window.scrollTo({top:0,behavior:'smooth'});return false;">
-   BACK TO TOP ↑
+
+    BACK TO TOP ↑
+
 </a>
 
-</div><footer><strong>KULZZY RADIO</strong>
+</div>
 
-<p>Celebrating Lives Everyday</p>
 
-<p>🌍 KULZZY UNIVERSAL LEADERSHIP</p>
+<footer>
 
-<p>Leadership • Recognition • Influence • Unity</p>
+    <strong>KULZZY RADIO</strong>
 
-</footer></body>
+    <p>Celebrating Lives Everyday</p>
+
+    <p>🌍 KULZZY UNIVERSAL LEADERSHIP</p>
+
+    <p>Leadership • Recognition • Influence • Unity</p>
+
+</footer>
+
+
+</body>
 </html>
